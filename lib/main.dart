@@ -72,16 +72,8 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
     print('CALLBACK: _onCalendarCreated');
   }
 
-  // DateTime now = DateTime.now();
-  // String _formattedDate = DateFormat('yyyy년 MMMM', 'ko_KR').format(DateTime.now());
-  // DateTime _focusedDay;
-  // DateTime get focusedDay => _focusedDay;
-  // void dateFormatter() {
-  //   _calendarController.focusedDay;
-  // }
   //todo:implement appbar title rebuild
   String _formattedDate = DateFormat('yyyy년 MMMM', 'ko_KR').format(DateTime.now());
-  // String _formattedDate = DateFormat('yyyy년 MMMM', 'ko_KR').format(dateFormatter());
 
   @override
   Widget build(BuildContext context) {
@@ -110,7 +102,11 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
           mainAxisSize: MainAxisSize.max,
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
-            RaisedButton(
+            ButtonTheme(
+              buttonColor: Colors.white70,
+              minWidth: 50,
+              height: 35,
+              child: RaisedButton(
               child: Text('월별'),
               onPressed: () {
                 setState(() {
@@ -118,7 +114,12 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
                 });
               },
             ),
-            RaisedButton(
+            ),
+            ButtonTheme(
+              buttonColor: Colors.white70,
+              minWidth: 50,
+            height: 35,
+            child: RaisedButton(
               child: Text('2주씩'),
               onPressed: () {
                 setState(() {
@@ -126,7 +127,12 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
                 });
               },
             ),
-            RaisedButton(
+            ),
+            ButtonTheme(
+              buttonColor: Colors.white70,
+              minWidth: 50,
+              height: 35,
+              child: RaisedButton(
               child: Text('1주씩'),
               onPressed: () {
                 setState(() {
@@ -134,7 +140,12 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
                 });
               },
             ),
-            RaisedButton(
+            ),
+            ButtonTheme(
+              buttonColor: Colors.white70,
+              minWidth: 50,
+              height: 35,
+              child: RaisedButton(
               child: Text('오늘'),
               onPressed: () {
                 _calendarController.setSelectedDay(
@@ -142,6 +153,7 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
                   runCallback: true,
                 );
               },
+            ),
             ),
           ],
         ),
@@ -151,7 +163,7 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
 
   Widget _buildTableCalendar() {
     return Padding(
-      padding: const EdgeInsets.only(top: 15),
+      padding: const EdgeInsets.only(top: 5),
       child: TableCalendar(
         headerVisible: false,
         locale: 'ko_KR',
