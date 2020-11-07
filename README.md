@@ -1,3 +1,3 @@
 # manday
 
-ManDay - 일용직 공수입력 어플리케이션
+ManDay - Scheduler, wage calculator for day workers in korea.
