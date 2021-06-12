@@ -1,3 +1,4 @@
-# manday
+# ManDay - Flutter Android App
+#### ManDay - Scheduler, wage calculator for day laborers in korea. written in Flutter
 
-ManDay - Scheduler, wage calculator for day workers in korea.
+## ``WORK IN PROGRESS``
